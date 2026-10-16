@@ -1,0 +1,42 @@
+# Restrict spectator mode only in the worlds listed below.
+# If enabled is false, spectator mode is restricted in all worlds.
+# 観戦モードを、下に書いたワールドでだけ制限します
+# enabled が false なら、すべてのワールドで制限します
+restrict-worlds:
+  enabled: false
+  worlds:
+    - world
+    - world_nether
+    - world_the_end
+
+# Prevent players in spectator mode from teleporting to other players with the spectator menu
+# (number keys). Players with spectatorlock.teleport can still teleport.
+# If restrict-worlds is enabled, only teleports into the listed worlds are prevented.
+# 観戦モードの人が、観戦メニュー(数字キー)でほかのプレイヤーの所へテレポートするのを止めます
+# spectatorlock.teleport の権限を持つ人は止めません
+# restrict-worlds が有効なら、行き先が上のワールドのときだけ止めます
+block-spectator-teleport: false
+
+# Language of messages: en (English) or ja (Japanese). Messages can be edited below.
+# To use another language, add a section such as "fr:" under messages and set language: fr
+# (missing messages are shown in English).
+# メッセージの言語: en(英語)か ja(日本語)。文は下で書き換えられます
+# ほかの言語を使うときは、messages の下に「fr:」などを書き足して language: fr にします
+# (書いていない項目は英語で表示します)
+# {player} is replaced with the player name.
+# {player} はプレイヤー名に置き換わります
+language: en
+
+messages:
+  en:
+    spectator-denied: "{player} is not allowed to switch to spectator mode."
+    teleport-denied: "You cannot teleport to other players in spectator mode."
+    reloaded: "Reloaded config.yml."
+    no-permission: "You do not have permission to use this command."
+    usage: "Usage: /spectatorlock reload"
+  ja:
+    spectator-denied: "{player} は観戦モードに切り替えられません。"
+    teleport-denied: "観戦モードでは、ほかのプレイヤーの所へテレポートできません。"
+    reloaded: "config.yml を読み込み直しました。"
+    no-permission: "このコマンドを使う権限がありません。"
+    usage: "使い方: /spectatorlock reload"

@@ -1,0 +1,22 @@
+name: SpectatorLock
+version: '${version}'
+api-version: '1.21.11'
+description: Prevents players without permission from switching to spectator mode.
+author: kubotan
+main: space.gorogoro.spectatorlock.SpectatorLock
+
+commands:
+  spectatorlock:
+    description: Reloads config.yml.
+    usage: /spectatorlock reload
+
+permissions:
+  spectatorlock.bypass:
+    description: Allows switching to spectator mode.
+    default: op
+  spectatorlock.teleport:
+    description: Allows teleporting to other players from the spectator menu when block-spectator-teleport is enabled.
+    default: op
+  spectatorlock.reload:
+    description: Allows using /spectatorlock reload.
+    default: op
